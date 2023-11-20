@@ -1,0 +1,25 @@
+:root {
+    /* colors */
+    --whitesmoke: #F7F4F3;
+    --light-silver: #C8C8C8;
+    --dark-silver: #B3B3B3;
+    --persian-orange: #DC965A;
+    --raisin-black: #242325;
+
+    /* font sizes */
+    --small: 0.75rem;
+    --medium: 1rem;
+    --large: 3rem;
+
+    /* font weights */
+    --bold: 800;
+    --normal: 500;
+}
+
+* {
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
