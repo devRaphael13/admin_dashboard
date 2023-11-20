@@ -12,8 +12,9 @@
     --large: 3rem;
 
     /* font weights */
-    --bold: 800;
-    --normal: 500;
+    --bold: 700;
+    --medium: 500;
+    --normal: 400;
 }
 
 * {
@@ -22,4 +23,5 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
+    
 }
