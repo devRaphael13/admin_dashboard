@@ -11,11 +11,15 @@
     --large: 3rem;
 
     /* font weights */
-    --bold: 700;
-    --medium: 500;
-    --normal: 400;
+    --bold-font: 700;
+    --medium-font: 500;
+    --normal-font: 400;
 
     --font-family: 'Roboto', sans-serif;
+
+    --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    
 }
 
 * {
@@ -82,66 +86,123 @@ main {
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: var(--medium);
     flex: 1 0 auto;
 }
 
 h2:last-child {
-    font-weight: var(--bold);
+    font-weight: var(--bold-font);
 }
 
-main > section {
+main>section {
     background: whitesmoke;
     padding: 2rem;
+    box-shadow:var(--box-shadow);
 }
 
-main > section > div {
+.profile {
+    padding: 1.5rem;
+    background-color: var(--primary);
+    border-radius: 2rem;
+    margin-right: 0.75rem;
+}
+
+main>section>div {
     display: flex;
 }
 
-main > section > div:last-child {
+main>section>div:last-child {
     margin-top: 2rem;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--medium);
 }
 
 input[type="search"] {
-    border-radius: 1rem;
+    border-radius: var(--medium);
     padding: 0.5rem;
     width: 50%;
-    font-size: var(--medium);
+    font-size: var(--medium-font);
     font-family: var(--font-family);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow:var(--box-shadow);
 }
 
 main svg {
     stroke: var(--primary);
 }
 
-main svg g {
+svg g {
     fill: var(--primary)
+}
+
+main svg:first-of-type {
+    fill: none;
 }
 
 main>div:last-child {
     display: flex;
-    padding: 2rem;
+    padding: 3rem 2rem;
     gap: 2rem;
 }
 
-main>div:last-child>section:first-child>div {
-    margin-top: 2rem;
+main>div:last-child svg {
+    fill: var(--primary);
+    width: var(--medium);
+    stroke-width: 0.5px;
+}
+
+.projects article > div > div:first-child>svg {
+    stroke: white;
+}
+
+.projects>div {
+    margin-top: 1.5rem;
     display: grid;
     grid-template: repeat(3, 1fr)/repeat(2, 1fr);
     gap: 2rem;
 }
 
-main>div:last-child>section:last-child>h3 {
-    margin-top: 2rem;
-}
-
 article {
     background: whitesmoke;
-    padding: 1rem;
-    border-radius: 0.75rem;
-    border-left: 2px solid var(--accent);
+    padding: var(--medium);
+    border-radius: var(--small);
+}
+
+.projects>h1::after {
+    content: "";
+    border-bottom: 2px solid var(--accent);
+    display: block;
+    width: 2.75rem;
+}
+
+.projects article {
+    border-left: 3px solid var(--accent);
+    box-shadow:var(--box-shadow);
+    padding: 1.5rem;
+}
+
+.projects article > div {
+    display: flex;
+    gap: var(--small);
+    margin-top: var(--medium);
+    justify-content: end;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.announcements article {
+    box-shadow: var(--box-shadow);
+    line-height: normal;
+}
+
+.announcements article>div:nth-child(even) {
+    margin: var(--small) auto;
+}
+
+.announcements article small:first-of-type {
+    font-weight: var(--bold-font);
+    display: block;
 }
