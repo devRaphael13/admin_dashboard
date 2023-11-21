@@ -14,6 +14,8 @@
     --bold: 700;
     --medium: 500;
     --normal: 400;
+
+    --font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -25,7 +27,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
 }
 
 
@@ -33,6 +35,7 @@ aside {
     background: var(--primary);
     padding: 2rem;
     color: var(--light-primary);
+    width: 20%;
 }
 
 
@@ -45,13 +48,14 @@ aside svg {
 }
 
 main {
-    background: var(--whitesmoke);
+    background: var(--light-primary);
+    width: 80%;
+    color: var(--primary);
 }
 
 
 .container {
     display: flex;
-
 }
 
 .dashboard-svg {
@@ -84,4 +88,60 @@ main {
 
 h2:last-child {
     font-weight: var(--bold);
+}
+
+main > section {
+    background: whitesmoke;
+    padding: 2rem;
+}
+
+main > section > div {
+    display: flex;
+}
+
+main > section > div:last-child {
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+input[type="search"] {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 50%;
+    font-size: var(--medium);
+    font-family: var(--font-family);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+main svg {
+    stroke: var(--primary);
+}
+
+main svg g {
+    fill: var(--primary)
+}
+
+main>div:last-child {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+main>div:last-child>section:first-child>div {
+    margin-top: 2rem;
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    gap: 2rem;
+}
+
+main>div:last-child>section:last-child>h3 {
+    margin-top: 2rem;
+}
+
+article {
+    background: whitesmoke;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border-left: 2px solid var(--accent);
 }
