@@ -1,10 +1,9 @@
 :root {
     /* colors */
-    --whitesmoke: #F7F4F3;
-    --light-silver: #C8C8C8;
-    --dark-silver: #B3B3B3;
-    --persian-orange: #DC965A;
-    --raisin-black: #242325;
+    /* --accent: #FFC759; */
+    --accent: #F26419;
+    --primary: #30384B;
+    --light-primary: #BABFD1;
 
     /* font sizes */
     --small: 0.75rem;
@@ -23,5 +22,66 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
-    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+aside {
+    background: var(--primary);
+    padding: 2rem;
+    color: var(--light-primary);
+}
+
+
+svg {
+    width: 2rem;
+}
+
+aside svg {
+    fill: var(--light-primary);
+}
+
+main {
+    background: var(--whitesmoke);
+}
+
+
+.container {
+    display: flex;
+
+}
+
+.dashboard-svg {
+    width: 3rem;
+}
+
+.dashboard-svg> :last-child {
+    fill: var(--light-primary);
+}
+
+.dashboard-svg> :first-child {
+    fill: var(--accent);
+}
+
+.dashboard-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.first-nav>div,
+.second-nav>div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex: 1 0 auto;
+}
+
+h2:last-child {
+    font-weight: var(--bold);
 }
