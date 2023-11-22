@@ -198,6 +198,11 @@ article {
     line-height: normal;
 }
 
+.announcements article:first-of-type > div:not(:last-child) {
+    border-bottom: 2px solid var(--light-primary);
+    padding-bottom: 0.625rem;
+}
+
 .announcements article>div:nth-child(even) {
     margin: var(--small) auto;
 }
